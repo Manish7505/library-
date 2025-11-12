@@ -1,0 +1,424 @@
+/* Books Page Styles */
+.books-page {
+    min-height: calc(100vh - 60px);
+    background-color: wheat;
+    padding: 40px 20px;
+}
+
+.books-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.books-catalog {
+    background-color: #fffaf0;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(16, 25, 13, 0.15);
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: rgb(24, 33, 62);
+}
+
+.section-heading p {
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.book-card {
+    background: linear-gradient(160deg, #fdf6e3 0%, #fff 100%);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 15px 25px rgba(24, 33, 62, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.book-card:focus-visible {
+    box-shadow: 0 0 0 4px rgba(234, 68, 74, 0.3);
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(24, 33, 62, 0.18);
+}
+
+.book-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(24, 33, 62, 0.1);
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(24, 33, 62);
+}
+
+.book-author {
+    font-size: 14px;
+    color: rgba(24, 33, 62, 0.7);
+    font-weight: 600;
+}
+
+.book-category {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    background-color: rgba(234, 68, 74, 0.15);
+    color: rgb(234, 68, 74);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.book-card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.book-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgb(234, 68, 74);
+    font-weight: 700;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.book-action-link .material-icons {
+    font-size: 18px;
+}
+
+.book-action-link:hover .material-icons {
+    transform: translateX(4px);
+    transition: transform 0.2s ease;
+}
+
+/* My Books Section */
+.my-books-section {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(24, 33, 62, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.my-books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-books-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(24, 33, 62);
+}
+
+.clear-btn {
+    background: rgba(234, 68, 74, 0.12);
+    color: rgb(234, 68, 74);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.clear-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.clear-btn:not(:disabled):hover {
+    background: rgba(234, 68, 74, 0.2);
+}
+
+.my-books-empty {
+    color: rgba(24, 33, 62, 0.6);
+    font-style: italic;
+}
+
+.my-books-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.my-book-item {
+    background: linear-gradient(135deg, rgba(24, 33, 62, 0.04) 0%, rgba(234, 68, 74, 0.08) 100%);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.my-book-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(24, 33, 62);
+}
+
+.my-book-info p {
+    font-size: 14px;
+    color: rgba(24, 33, 62, 0.6);
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.my-book-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(120deg, rgb(234, 68, 74), rgb(255, 138, 101));
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.my-book-date {
+    display: block;
+    font-size: 11px;
+    color: rgba(24, 33, 62, 0.5);
+    margin-top: 6px;
+    letter-spacing: 0.4px;
+}
+
+.remove-btn {
+    background: rgba(234, 68, 74, 0.12);
+    color: rgb(234, 68, 74);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: rgba(234, 68, 74, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.book-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.book-modal.hidden {
+    display: none;
+}
+
+.book-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.book-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    max-width: 700px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    border: none;
+    background: rgba(234, 68, 74, 0.08);
+    color: rgb(234, 68, 74);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.modal-book-cover {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(24, 33, 62, 0.2);
+}
+
+.modal-book-details {
+    flex: 1;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-book-details h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(24, 33, 62);
+}
+
+.modal-book-details p {
+    margin: 0;
+    color: rgba(24, 33, 62, 0.7);
+    font-weight: 600;
+}
+
+.modal-instructions {
+    font-size: 15px;
+    color: rgba(24, 33, 62, 0.75);
+    margin-top: 12px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.modal-action-btn {
+    flex: 1;
+    min-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-action-btn.issue {
+    background: linear-gradient(120deg, rgb(69, 69, 185), rgb(120, 120, 255));
+    color: white;
+}
+
+.modal-action-btn.wishlist {
+    background: linear-gradient(120deg, rgb(234, 68, 74), rgb(255, 138, 101));
+    color: white;
+}
+
+.modal-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+}
+
+.modal-action-btn .material-icons {
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .books-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .my-books-section {
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .books-page {
+        padding: 30px 15px;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .book-modal-content {
+        padding: 20px;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-book-cover {
+        width: 150px;
+        height: 220px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+

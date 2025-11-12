@@ -1,0 +1,499 @@
+/* Black and White Sign In / Sign Up Page Styles */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    background: #ffffff;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: 4px 4px 0px 0px #000000;
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-header {
+    background: #000000;
+    padding: 40px 30px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 3px solid #000000;
+}
+
+.library-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 56px;
+    color: #ffffff;
+}
+
+.library-logo h1 {
+    font-size: 26px;
+    font-weight: 900;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.auth-subtitle {
+    font-size: 15px;
+    margin: 15px 0 0 0;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Auth Tabs */
+.auth-tabs {
+    display: flex;
+    background: #ffffff;
+    border-bottom: 2px solid #000000;
+}
+
+.auth-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border: none;
+    border-right: 1px solid #000000;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.auth-tab:last-child {
+    border-right: none;
+}
+
+.auth-tab:hover {
+    background: #f5f5f5;
+}
+
+.auth-tab.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.auth-tab.active::after {
+    display: none;
+}
+
+.auth-tab .material-icons {
+    font-size: 18px;
+}
+
+/* Form Container */
+.auth-form-container {
+    position: relative;
+    min-height: 500px;
+}
+
+.auth-form {
+    display: none;
+    padding: 35px 30px;
+    animation: fadeIn 0.3s ease;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group label .material-icons {
+    font-size: 18px;
+    color: #000000;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #000000;
+    border-radius: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #000000;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 2px #000000;
+}
+
+.form-input::placeholder {
+    color: #999999;
+}
+
+/* Password Input Wrapper */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.password-toggle:hover {
+    opacity: 0.6;
+}
+
+.password-toggle .material-icons {
+    font-size: 20px;
+}
+
+/* User Type Toggle */
+.user-type-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 12px;
+    background: #f5f5f5;
+    border: 1px solid #000000;
+    border-radius: 0;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #000000;
+    transition: 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #000000;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+    background-color: #ffffff;
+}
+
+.user-type-toggle span:last-child {
+    font-weight: 600;
+    color: #000000;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Error Message */
+.error-message {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    margin: -10px 0 18px 0;
+    min-height: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error-message::before {
+    content: '⚠';
+    font-size: 16px;
+}
+
+/* Submit Button */
+.auth-submit-btn {
+    width: 100%;
+    padding: 16px 24px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+    background: #ffffff;
+    color: #000000;
+}
+
+.auth-submit-btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.auth-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.auth-submit-btn .material-icons.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Auth Divider */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 28px 0 18px;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000000;
+}
+
+.auth-divider span {
+    padding: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Quick Access / Demo Credentials */
+.quick-access {
+    text-align: center;
+    padding: 18px;
+    background: #f5f5f5;
+    border: 2px solid #000000;
+    border-radius: 0;
+    margin-top: 18px;
+}
+
+.quick-access p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.demo-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.demo-item {
+    font-size: 11px;
+    color: #000000;
+    padding: 8px 10px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    border-left: 3px solid #000000;
+}
+
+.demo-item strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+.demo-item code {
+    background: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #000000;
+    font-weight: 700;
+    border: 1px solid #000000;
+}
+
+/* Auth Footer */
+.auth-footer {
+    padding: 18px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-top: 2px solid #000000;
+}
+
+.auth-footer p {
+    margin: 0;
+    font-size: 11px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signin-container {
+        padding: 20px 15px;
+    }
+
+    .auth-card {
+        max-width: 100%;
+    }
+
+    .auth-header {
+        padding: 30px 20px;
+    }
+
+    .library-logo h1 {
+        font-size: 22px;
+    }
+
+    .logo-icon {
+        font-size: 48px;
+    }
+
+    .auth-form {
+        padding: 25px 20px;
+    }
+
+    .auth-tab {
+        padding: 15px 12px;
+        font-size: 13px;
+    }
+
+    .demo-credentials {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header {
+        padding: 25px 15px;
+    }
+
+    .library-logo h1 {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        font-size: 40px;
+    }
+
+    .auth-form {
+        padding: 20px 15px;
+    }
+
+    .form-input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
